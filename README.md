@@ -284,6 +284,12 @@ This project demonstrates key cybersecurity concepts including:
 
 # 👨‍💻 Author
 
-Cybersecurity student project focused on building practical SOC automation tools.
+**Vishwa Patel And Heenaba Chauhan**
+
+Cybersecurity student passionate about:
+- SOC automation
+- threat intelligence
+- AI-driven security tooling
+- network security research
 
 ---
