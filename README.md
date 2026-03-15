@@ -1,15 +1,17 @@
 # 🛡 SOC AI Security Agent
 
-🚨 A lightweight AI-powered Security Operations Center (SOC) investigation platform built with **FastAPI and Python**.
+🚨 A lightweight **AI-powered Security Operations Center (SOC) investigation platform** built with **Python and FastAPI**.
 
-This system acts as a simplified **AI security analyst**, capable of investigating suspicious:
+This system acts like a **virtual security analyst**, helping users investigate suspicious:
 
-- IP addresses
-- URLs
-- file hashes
-- network ports
+- IP addresses  
+- URLs / links  
+- file hashes  
+- network ports  
 
-through an automated investigation workflow and an interactive dashboard.
+through an **automated investigation workflow and an interactive dashboard**.
+
+The goal of this project is to **make cybersecurity investigation simple and accessible even for non-technical users**, helping them understand potential threats before they cause harm.
 
 ---
 
@@ -17,30 +19,32 @@ through an automated investigation workflow and an interactive dashboard.
 
 ## Security Dashboard
 
-![Dashboard](/screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ## Investigation Example
 
-![Investigation](/screenshots/investigation.png)
+![Investigation](screenshots/investigation.png)
 
 ## Activity History
 
-![Activity](/screenshots/activity.png)
+![Activity](screenshots/activity.png)
 
 ---
 
 # 🚀 Project Overview
 
-Security analysts frequently investigate indicators such as:
+People often encounter suspicious things like:
 
-- suspicious IP addresses
-- unknown URLs
-- malicious file hashes
-- exposed network services
+- unknown links in emails  
+- suspicious IP addresses  
+- potentially malicious files  
+- unusual network activity  
 
-This project demonstrates how an **AI-driven investigation agent** can automate these tasks by coordinating multiple security tools into a structured investigation pipeline.
+Most users **do not know how to investigate these safely**.
 
-Users can simply type commands like:
+This project demonstrates how an **AI-driven investigation agent** can automate these security checks and provide **clear explanations and guidance**.
+
+Users can simply enter commands such as:
 
 ```
 8.8.8.8
@@ -49,13 +53,13 @@ port scan 127.0.0.1
 investigate https://example.com
 ```
 
-The AI agent then **detects the intent and runs the appropriate investigation tools automatically.**
+The AI agent automatically **detects the user’s intent and runs the appropriate investigation tools.**
 
 ---
 
 # 🧠 How the AI Agent Works
 
-The system follows a simplified **SOC investigation pipeline**:
+The system follows a simplified **SOC investigation workflow**:
 
 ```
 User Input
@@ -75,28 +79,28 @@ AI Explanation
 Investigation Report
 ```
 
-Each investigation may trigger multiple security tools such as:
+Each investigation may trigger multiple security checks such as:
 
-- IP reputation analysis
-- URL risk analysis
-- DNS resolution
-- port scanning
-- incident response guidance
+- IP reputation analysis  
+- URL risk analysis  
+- DNS resolution  
+- port scanning  
+- incident response guidance  
 
 ---
 
-# 🔎 Features
+# 🔎 Key Features
 
 ## Automated Security Investigation
 
-The agent automatically detects the investigation type and runs the appropriate security tools.
+The AI agent automatically detects the investigation type and runs the correct security tools.
 
 Examples:
 
 | Command | Action |
-|------|------|
+|--------|--------|
 | `8.8.8.8` | IP reputation analysis |
-| `https://example.com` | URL risk analysis |
+| `https://example.com` | URL security scan |
 | `port scan 127.0.0.1` | local port scanning |
 | `investigate domain.com` | multi-step investigation |
 | `I clicked this link` | incident response guidance |
@@ -109,10 +113,10 @@ The system evaluates risk using a **custom threat scoring engine**.
 
 Threat indicators include:
 
-- malicious reports
-- suspicious open ports
-- risky services
-- malware hash detections
+- malicious reputation reports  
+- suspicious open ports  
+- risky services  
+- malware hash detections  
 
 Results are categorized as:
 
@@ -126,13 +130,15 @@ HIGH
 
 ## SOC Investigation Dashboard
 
-The web dashboard provides a simplified SOC-style interface including:
+The web dashboard provides a **simple SOC-style interface** including:
 
-- threat alerts
-- investigation history
-- recent activity tracking
-- investigation results
-- automated security guidance
+- threat alerts  
+- investigation history  
+- recent activity monitoring  
+- investigation results  
+- automated security guidance  
+
+This helps users quickly understand **whether something is safe or potentially dangerous**.
 
 ---
 
@@ -141,7 +147,7 @@ The web dashboard provides a simplified SOC-style interface including:
 The platform integrates several security investigation tools:
 
 | Tool | Purpose |
-|-----|------|
+|------|--------|
 | IP Scanner | reputation analysis |
 | URL Scanner | phishing / malware detection |
 | Port Scanner | network exposure discovery |
@@ -154,19 +160,13 @@ The platform integrates several security investigation tools:
 
 The system stores investigation history including:
 
-- timestamp
-- investigation target
-- investigation type
-- threat score
-- severity level
+- timestamp  
+- investigation target  
+- investigation type  
+- threat score  
+- severity level  
 
 This simulates a simplified **SOC case tracking system**.
-
----
-
-## Report Export
-
-Investigations can be exported as structured reports for documentation and incident response workflows.
 
 ---
 
@@ -197,7 +197,7 @@ Database Logging
 # 🖥 Technology Stack
 
 | Component | Technology |
-|------|------|
+|-----------|------------|
 | Backend | FastAPI |
 | Frontend | HTML / CSS / JavaScript |
 | Language | Python |
@@ -235,15 +235,15 @@ Investigation Report
 
 # ⚠ Limitations
 
-This project focuses on demonstrating **SOC automation concepts**.
+This project currently focuses on demonstrating **SOC automation concepts and AI-assisted investigations**.
 
 Future improvements may include:
 
-- VirusTotal integration
-- Shodan intelligence integration
-- real threat intelligence feeds
-- malware sandbox analysis
-- automated threat correlation
+- VirusTotal integration  
+- Shodan intelligence integration  
+- real threat intelligence feeds  
+- malware sandbox analysis  
+- automated threat correlation  
 
 ---
 
@@ -251,11 +251,11 @@ Future improvements may include:
 
 Planned enhancements include:
 
-- real threat intelligence APIs
-- IOC correlation graphs
-- automated threat hunting workflows
-- machine learning threat scoring
-- full SOC case management
+- real threat intelligence APIs  
+- IOC correlation graphs  
+- automated threat hunting workflows  
+- machine learning threat scoring  
+- full SOC case management  
 
 ---
 
@@ -263,33 +263,39 @@ Planned enhancements include:
 
 This project demonstrates key cybersecurity concepts including:
 
-- SOC automation
-- threat intelligence analysis
-- incident response workflows
-- network security scanning
-- AI-assisted investigation systems
+- SOC automation  
+- threat intelligence analysis  
+- incident response workflows  
+- network security scanning  
+- AI-assisted investigation systems  
 
 ---
 
 # 📚 Skills Demonstrated
 
-- Python security tool development
-- FastAPI backend engineering
-- AI agent workflow design
-- cybersecurity investigation automation
-- security dashboard development
-- threat scoring algorithms
+- Python security tool development  
+- FastAPI backend engineering  
+- AI agent workflow design  
+- cybersecurity investigation automation  
+- security dashboard development  
+- threat scoring algorithms  
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Authors
 
-**Vishwa Patel And Heenaba Chauhan**
+**Vishwa Patel**  
+**Heenaba Chauhan**
 
 Cybersecurity students passionate about:
-- SOC automation
-- threat intelligence
-- AI-driven security tooling
-- network security research
+
+- SOC automation  
+- threat intelligence  
+- AI-driven security tools  
+- network security research  
 
 ---
+
+# 💡 Project Goal
+
+To demonstrate how **AI-powered investigation tools can help everyday users understand and respond to potential cybersecurity threats**, even without advanced technical knowledge.
