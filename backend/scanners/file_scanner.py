@@ -1,9 +1,14 @@
 import os
 import hashlib
 import requests
+from dotenv import load_dotenv
 from ai_helper import explain_threat
 
-API_KEY = "7b31bf347cf7bed3f3922be134caec018e7c1801a7c61f7392d646fdba36e469"
+# Load environment variables from .env
+load_dotenv()
+
+# Get API key from environment
+API_KEY = os.getenv("VIRUSTOTAL_API_KEY")
 
 
 def get_file_hash(file_path):
@@ -16,11 +21,14 @@ def get_file_hash(file_path):
 
         return sha256.hexdigest()
 
-    except:
+    except Exception:
         return None
 
 
 def check_hash(hash_value):
+
+    if not API_KEY:
+        return None
 
     url = f"https://www.virustotal.com/api/v3/files/{hash_value}"
 
@@ -40,7 +48,7 @@ def check_hash(hash_value):
 
         return stats
 
-    except:
+    except Exception:
         return None
 
 
@@ -66,7 +74,6 @@ def scan_device(folder="C:\\"):
 
             if result["malicious"] > 0:
 
-                # AI explanation
                 ai_analysis = explain_threat(
                     f"A suspicious file located at {path} was detected as malicious by {result['malicious']} antivirus engines."
                 )
