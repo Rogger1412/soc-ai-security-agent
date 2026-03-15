@@ -286,7 +286,7 @@ This project demonstrates key cybersecurity concepts including:
 
 **Vishwa Patel And Heenaba Chauhan**
 
-Cybersecurity student passionate about:
+Cybersecurity students passionate about:
 - SOC automation
 - threat intelligence
 - AI-driven security tooling
