@@ -4,10 +4,10 @@
 
 This system acts like a **virtual security analyst**, helping users investigate suspicious:
 
-- IP addresses  
-- URLs / links  
-- file hashes  
-- network ports  
+- IP addresses
+- URLs / links
+- file hashes
+- network ports
 
 through an **automated investigation workflow and an interactive dashboard**.
 
@@ -18,15 +18,12 @@ The goal of this project is to **make cybersecurity investigation simple and acc
 # 📸 Dashboard Preview
 
 ## Security Dashboard
-
 ![Dashboard](screenshots/dashboard.png)
 
 ## Investigation Example
-
 ![Investigation](screenshots/investigation.png)
 
 ## Activity History
-
 ![Activity](screenshots/activity.png)
 
 ---
@@ -35,10 +32,10 @@ The goal of this project is to **make cybersecurity investigation simple and acc
 
 People often encounter suspicious things like:
 
-- unknown links in emails  
-- suspicious IP addresses  
-- potentially malicious files  
-- unusual network activity  
+- unknown links in emails
+- suspicious IP addresses
+- potentially malicious files
+- unusual network activity
 
 Most users **do not know how to investigate these safely**.
 
@@ -53,7 +50,44 @@ port scan 127.0.0.1
 investigate https://example.com
 ```
 
-The AI agent automatically **detects the user’s intent and runs the appropriate investigation tools.**
+The AI agent automatically **detects the user's intent and runs the appropriate investigation tools.**
+
+---
+
+# ⚙ Installation & Setup
+
+### Requirements
+
+- Python 3.9+
+- pip
+
+### Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Rogger1412/soc-ai-security-agent.git
+cd soc-ai-security-agent
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the application
+uvicorn main:app --reload
+
+# 4. Open in browser
+http://localhost:8000
+```
+
+### Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| fastapi | Backend API framework |
+| uvicorn | ASGI server |
+| requests | HTTP requests for IP/URL scanning |
+| python-nmap | Network port scanning |
+| sqlite3 | Investigation history storage |
+| dnspython | DNS resolution |
 
 ---
 
@@ -81,11 +115,11 @@ Investigation Report
 
 Each investigation may trigger multiple security checks such as:
 
-- IP reputation analysis  
-- URL risk analysis  
-- DNS resolution  
-- port scanning  
-- incident response guidance  
+- IP reputation analysis
+- URL risk analysis
+- DNS resolution
+- port scanning
+- incident response guidance
 
 ---
 
@@ -94,8 +128,6 @@ Each investigation may trigger multiple security checks such as:
 ## Automated Security Investigation
 
 The AI agent automatically detects the investigation type and runs the correct security tools.
-
-Examples:
 
 | Command | Action |
 |--------|--------|
@@ -113,10 +145,10 @@ The system evaluates risk using a **custom threat scoring engine**.
 
 Threat indicators include:
 
-- malicious reputation reports  
-- suspicious open ports  
-- risky services  
-- malware hash detections  
+- malicious reputation reports
+- suspicious open ports
+- risky services
+- malware hash detections
 
 Results are categorized as:
 
@@ -132,27 +164,23 @@ HIGH
 
 The web dashboard provides a **simple SOC-style interface** including:
 
-- threat alerts  
-- investigation history  
-- recent activity monitoring  
-- investigation results  
-- automated security guidance  
-
-This helps users quickly understand **whether something is safe or potentially dangerous**.
+- threat alerts
+- investigation history
+- recent activity monitoring
+- investigation results
+- automated security guidance
 
 ---
 
 ## Multi-Tool Security Engine
 
-The platform integrates several security investigation tools:
-
-| Tool | Purpose |
-|------|--------|
-| IP Scanner | reputation analysis |
-| URL Scanner | phishing / malware detection |
-| Port Scanner | network exposure discovery |
-| Hash Scanner | malware hash lookup |
-| Domain Resolver | domain → IP mapping |
+| Tool | Purpose | Library |
+|------|---------|---------|
+| IP Scanner | reputation analysis | requests |
+| URL Scanner | phishing / malware detection | requests |
+| Port Scanner | network exposure discovery | python-nmap |
+| Hash Scanner | malware hash lookup | requests |
+| Domain Resolver | domain → IP mapping | dnspython |
 
 ---
 
@@ -160,13 +188,13 @@ The platform integrates several security investigation tools:
 
 The system stores investigation history including:
 
-- timestamp  
-- investigation target  
-- investigation type  
-- threat score  
-- severity level  
+- timestamp
+- investigation target
+- investigation type
+- threat score
+- severity level
 
-This simulates a simplified **SOC case tracking system**.
+This simulates a simplified **SOC case tracking system.**
 
 ---
 
@@ -183,13 +211,13 @@ Investigation Planner
         ↓
 Tool Execution Engine
         ↓
-Security Scanners
+Security Scanners (requests, python-nmap, dnspython)
         ↓
 Threat Scoring Engine
         ↓
 Response Builder
         ↓
-Database Logging
+SQLite Database Logging
 ```
 
 ---
@@ -200,9 +228,11 @@ Database Logging
 |-----------|------------|
 | Backend | FastAPI |
 | Frontend | HTML / CSS / JavaScript |
-| Language | Python |
+| Language | Python 3.9+ |
 | Database | SQLite |
-| Security Tools | Custom scanners |
+| Port Scanning | python-nmap |
+| DNS Resolution | dnspython |
+| HTTP Scanning | requests |
 | Architecture | Modular AI Agent |
 
 ---
@@ -218,13 +248,13 @@ investigate https://example.com
 Agent workflow:
 
 ```
-URL Scan
+URL Scan (requests)
    ↓
-Domain Resolution
+Domain Resolution (dnspython)
    ↓
-IP Reputation Analysis
+IP Reputation Analysis (requests)
    ↓
-Port Scan
+Port Scan (python-nmap)
    ↓
 Threat Scoring
    ↓
@@ -235,67 +265,34 @@ Investigation Report
 
 # ⚠ Limitations
 
-This project currently focuses on demonstrating **SOC automation concepts and AI-assisted investigations**.
+This project currently uses custom-built scanners without live threat intelligence feeds.
 
-Future improvements may include:
+Future improvements planned:
 
-- VirusTotal integration  
-- Shodan intelligence integration  
-- real threat intelligence feeds  
-- malware sandbox analysis  
-- automated threat correlation  
-
----
-
-# 🔮 Future Improvements
-
-Planned enhancements include:
-
-- real threat intelligence APIs  
-- IOC correlation graphs  
-- automated threat hunting workflows  
-- machine learning threat scoring  
-- full SOC case management  
-
----
-
-# 🎯 Educational Purpose
-
-This project demonstrates key cybersecurity concepts including:
-
-- SOC automation  
-- threat intelligence analysis  
-- incident response workflows  
-- network security scanning  
-- AI-assisted investigation systems  
+- VirusTotal API integration
+- Shodan intelligence integration
+- Real-time threat intelligence feeds
+- Malware sandbox analysis
+- Automated threat correlation
 
 ---
 
 # 📚 Skills Demonstrated
 
-- Python security tool development  
-- FastAPI backend engineering  
-- AI agent workflow design  
-- cybersecurity investigation automation  
-- security dashboard development  
-- threat scoring algorithms  
+- Python security tool development
+- FastAPI backend engineering
+- AI agent workflow design
+- Cybersecurity investigation automation
+- Security dashboard development
+- Threat scoring algorithms
+- Network scanning (Nmap)
+- DNS analysis
 
 ---
 
 # 👨‍💻 Authors
 
-**Vishwa Patel**  
+**Vishwa Patel** — [github.com/Rogger1412](https://github.com/Rogger1412)
 **Heenaba Chauhan**
 
-Cybersecurity students passionate about:
-
-- SOC automation  
-- threat intelligence  
-- AI-driven security tools  
-- network security research  
-
----
-
-# 💡 Project Goal
-
-To demonstrate how **AI-powered investigation tools can help everyday users understand and respond to potential cybersecurity threats**, even without advanced technical knowledge.
+Cybersecurity students specializing in SOC automation, threat intelligence, and AI-driven security tools.
